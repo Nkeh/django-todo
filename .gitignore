@@ -1,1 +1,5 @@
 env
+todo/__pycache__
+todo/migrations
+todoapp/__pycache__
+todoapp/migrations
