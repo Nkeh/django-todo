@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Task</title>
+    <link rel="stylesheet" href="#" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <header class="signup-header">
+          <h1>Create Task</h1>
+        </header>
+        <main class="signup-body">
+          <form action="{% url 'task.list' %}" method="POST">{% csrf_token %}
+            
+              <label for="title">Title</label>
+              <input type="text" placeholder="Enter task" name="title" />
+              
+            
+                <label for="description">Description</label>
+                <textarea name="description" cols="40" rows="10" required="" id="description"></textarea>
+          
+                <label for="due_date">Due Date</label>
+                <input type="datetime-local" id="due_date" name="due_date">
+                
+            
+            <br>
+
+            <p>
+                <button type="submit" id="submitBtn">Create Task</button>
+            </p>
+          </form>
+        </main>
+        
+    </div>
+    </div>
+  </body>
+  
+</html>
